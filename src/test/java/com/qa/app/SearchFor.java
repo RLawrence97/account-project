@@ -23,5 +23,11 @@ public class SearchFor {
 		CountUser cu = new CountUser();
 		assertEquals(1,cu.countForFirstName("Dave"));
 	}
-
+	
+	@Test
+	public void test4() {
+		Service s = new Service();
+		s.addToHashMap(s.createAccount("John", "Gordon", "34RESF22W1"));
+		assertEquals(4,s.getHmap().size());
+	}
 }
