@@ -1,7 +1,9 @@
 package com.qa.app;
 
 public class App {
-	public void printHello() {
+	public static void main (String[] args) {
 		System.out.println("Hello World");
+		Control c = new Control();
+		c.runTest();
 	}
 }
