@@ -7,7 +7,7 @@ import com.qa.utils.PersonToJSON;
 public class Control {
 	public void runTest (){
 		Service service = new Service();
-		int tempKey[] = new int[6];
+		int[] tempKey = new int[6];
 		for (int i = 0; i < 6; i++) {
 			tempKey[i] = service.addToHashMap(service.createAccount("John", "Gordon", "A227DE11" + i));
 		}

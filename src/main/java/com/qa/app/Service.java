@@ -45,7 +45,6 @@ public class Service {
 	}
 	
 	public Account createAccount(String incomingFirstName, String incomingLastName, String incomingAccountNum) {
-		Account createdAccount = new Account(incomingFirstName, incomingLastName, incomingAccountNum);
-		return createdAccount;
+		return new Account(incomingFirstName, incomingLastName, incomingAccountNum);
 	}
 }
