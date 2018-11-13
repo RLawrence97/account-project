@@ -2,7 +2,7 @@ package com.qa.app;
 import com.qa.app.domain.Account;
 
 public class Control {
-	public static void main (String[] args) {
+	public void runTest () {
 		Service service = new Service();
 		int tempKey[] = new int[6];
 		for (int i = 0; i < 6; i++) {
