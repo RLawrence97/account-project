@@ -11,6 +11,9 @@ public class Service {
 	private HashMap<Integer, Account> hmap;
 	public Service() {
 		 hmap = new HashMap<Integer, Account>();
+		 hmap.put(1, new Account("John", "Gordon", "AJJ12334"));
+		 hmap.put(2, new Account("Dave", "McDave", "JKJ3435A1"));
+		 hmap.put(3, new Account("John", "Davis", "DD664FG22"));
 	}
 	
 	public int addToHashMap(Account incomingAccount) {
