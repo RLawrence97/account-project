@@ -5,7 +5,7 @@ import com.qa.utils.PersonToJSON;
 
 
 public class Control {
-	public void runTest (){
+	public boolean runTest (){
 		Service service = new Service();
 		int[] tempKey = new int[6];
 		for (int i = 0; i < 6; i++) {
@@ -20,9 +20,12 @@ public class Control {
 				System.out.println(PersonToJSON.convertPerson(temporaryAccount));
 			} catch (NullPointerException npe) {
 				System.out.println(npe.toString());
+				return false;
 			} catch (JsonProcessingException e) {
 				System.out.println(e.toString());
+				return false;
 			}
 		}
+		return true;
 	}
 }
