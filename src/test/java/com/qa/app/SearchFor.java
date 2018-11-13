@@ -20,6 +20,9 @@ public class SearchFor {
 	public void test2() {
 		CountUser cu = new CountUser();
 		assertEquals(0,cu.countForFirstName("Trevor"));
+		Service s = new Service();
+		s.addToHashMap(new Account("Trevor", "The Toad", "33FSD39"));
+		assertEquals(1,cu.countForFirstName("Trevor", s.getHmap()));
 	}
 	
 	@Test
