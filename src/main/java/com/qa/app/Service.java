@@ -52,7 +52,7 @@ public class Service {
 		return new Account(incomingFirstName, incomingLastName, incomingAccountNum);
 	}
 
-	public HashMap getHmap() {
+	public HashMap<Integer, Account> getHmap() {
 		return this.hmap;
 	}
 }
