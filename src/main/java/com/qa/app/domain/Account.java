@@ -5,7 +5,12 @@ public class Account {
 	private String lastName;
 	private String accountNumber;
 	
-	public Account() {}
+	public Account(String createdFirstName, String createdLastName, String createdAccoutNum) {
+		super();
+		this.firstName = createdFirstName;
+		this.lastName = createdLastName;
+		this.accountNumber = createdAccoutNum;
+	}
 
 	public String getFirstName() {
 		return firstName;

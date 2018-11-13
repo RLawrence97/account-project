@@ -1,8 +1,11 @@
 package com.qa.app;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.qa.app.domain.Account;
+import com.qa.utils.PersonToJSON;
+
 
 public class Control {
-	public void runTest () {
+	public void runTest (){
 		Service service = new Service();
 		int tempKey[] = new int[6];
 		for (int i = 0; i < 6; i++) {
@@ -14,8 +17,11 @@ public class Control {
 				Account temporaryAccount = service.getByKey(tempKey[j]);
 				String printedAccount = "Name: " + temporaryAccount.getFirstName() + " " + temporaryAccount.getLastName() + "\nAccount Number: " + temporaryAccount.getAccountNumber();
 				System.out.println(printedAccount);
+				System.out.println(PersonToJSON.convertPerson(temporaryAccount));
 			} catch (NullPointerException npe) {
 				System.out.println(npe.toString());
+			} catch (JsonProcessingException e) {
+				System.out.println(e.toString());
 			}
 		}
 	}
